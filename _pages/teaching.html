@@ -7,6 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+{% assign mypage = site.teaching | where: "path", "_teaching/2014-spring-teaching-1.md" | first %}
+{% if mypage %}
+  <h2>{{ mypage.title }}</h2>
+  {{ mypage.content }}
+{% endif %}
+
