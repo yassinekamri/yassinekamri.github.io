@@ -7,9 +7,11 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign mypage = site.teaching | where: "path", "_teaching/2014-spring-teaching-1.md" | first %}
+{% assign mypage = site.teaching | where_exp: "p", 'p.url contains "/teaching/EPL-teaching"' | first %}
 {% if mypage %}
   <h2>{{ mypage.title }}</h2>
   {{ mypage.content }}
+{% else %}
+  <p><em>Couldn’t find the teaching page with URL containing /teaching/EPL-teaching.</em></p>
 {% endif %}
 
