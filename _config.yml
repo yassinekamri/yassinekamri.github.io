@@ -22,7 +22,7 @@ repository               : "yassinekamri/yassinekamri.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "photo_profile.jpg"
+  avatar           : "photo_profile.png"
   name             : "Yassine Kamri"
   pronouns         : # example: "she/her"  
   bio              : "PhD student at UCLouvain"
